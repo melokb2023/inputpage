@@ -1,0 +1,7 @@
+{
+  "name": "inputpage",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
