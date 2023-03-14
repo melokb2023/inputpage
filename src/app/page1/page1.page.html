@@ -1,0 +1,112 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Input Page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-textarea id ="user-input1" placeholder = "First Input"></ion-textarea> <br>
+<ion-textarea id ="user-input2" placeholder = "Second Input"></ion-textarea> <br>
+<ion-button expand="block" (click) = "checkInput()">Go To Output Page</ion-button>
+<ion-list>  
+  <ion-item *ngFor="let entry of form">  
+    <ion-label>{{entry.val}}</ion-label>  
+    <ion-checkbox slot="start" [(ngModel)]="entry.isChecked"></ion-checkbox>  
+  </ion-item>  
+</ion-list>  
+<ion-list>  
+  <ion-radio-group id ="fruitInput">   
+    <ion-list-header>  
+      Subject  
+    </ion-list-header>  
+  
+    <ion-item>  
+      <ion-label>Java</ion-label>  
+      <ion-radio value="java"></ion-radio>  
+    </ion-item>  
+  
+    <ion-item>  
+      <ion-label>Python</ion-label>  
+      <ion-radio value="python"></ion-radio>  
+    </ion-item>  
+  </ion-radio-group>  
+  <ion-radio-group>  
+    <ion-item>  
+      <ion-label>Android</ion-label>  
+      <ion-radio value="android"></ion-radio>  
+    </ion-item>  
+  
+    <ion-item>  
+      <ion-label>Ionic</ion-label>  
+      <ion-radio value="ionic"></ion-radio>  
+    </ion-item>  
+  
+    <ion-item>  
+      <ion-label>Angular</ion-label>  
+      <ion-radio value="angular"></ion-radio>  
+    </ion-item>  
+  </ion-radio-group>  
+</ion-list>  
+
+<ion-radio-group (ionChange)="carChangeEvent($event)"  [(ngModel)]="car_id">
+
+  <ion-item>
+      <ion-label>Button 1</ion-label>
+      <ion-radio slot="start" value="1"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+      <ion-label>Button 2</ion-label>
+      <ion-radio slot="start" value="2"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+      <ion-label>Button 3</ion-label>
+      <ion-radio slot="start" value="3"></ion-radio>
+  </ion-item>
+
+</ion-radio-group>
+
+<ion-list>
+  <ion-item>
+    <ion-label>Default Toggle</ion-label>
+    <ion-toggle slot="end"></ion-toggle>
+  </ion-item>
+  <ion-item>
+    <ion-label>Checked Toggle</ion-label>
+    <ion-toggle slot="end" [checked]="true"></ion-toggle>
+  </ion-item>
+  <ion-item>
+    <ion-label>Disabled Toggle</ion-label>
+    <ion-toggle slot="end" [disabled]="true"></ion-toggle>
+  </ion-item>
+  <ion-item>
+    <ion-label>Disabled Checked Toggle</ion-label>
+    <ion-toggle slot="end" [checked]="true" [disabled]="true"></ion-toggle>
+  </ion-item>
+</ion-list>
+
+<ion-list>
+  <ion-item>
+    <ion-select placeholder="Select fruit">
+      <ion-select-option value="apples">Apples</ion-select-option>
+      <ion-select-option value="oranges">Oranges</ion-select-option>
+      <ion-select-option value="bananas">Bananas</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+
+<ion-item>  
+  <ion-range id="dual-range" dual-knobs>  
+  </ion-range>  
+</ion-item>  
+
+<ion-item>  
+  <ion-range min="-200" max="200" pin="true">  
+  </ion-range>  
+</ion-item>  
+</ion-list>  
+
+
+</ion-content>
