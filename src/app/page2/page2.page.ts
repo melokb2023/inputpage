@@ -18,6 +18,8 @@ export class Page2Page implements OnInit {
   ValDivide: any = 'ValDivide';
   ValModulo: any = 'ValModulo';
   ValFruits: any = 'ValFruits';
+  fruitInput: any = 'fruitInput';
+  programmingInput: any = 'programmingInput';
 
   GoToInputPage(){
     this.navCtrl.navigateBack(['/page1']);
@@ -38,6 +40,8 @@ export class Page2Page implements OnInit {
       this.ValMultiply = params['ValMultiply'];
       this.ValDivide = params['ValDivide'];
       this.ValModulo = params['ValModulo'];
+      this.fruitInput = params['fruitInput'];
+      this.programmingInput = params['programmingInput'];
     })
   }
  

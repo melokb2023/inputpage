@@ -8,15 +8,21 @@
 <ion-content>
 <ion-textarea id ="user-input1" placeholder = "First Input"></ion-textarea> <br>
 <ion-textarea id ="user-input2" placeholder = "Second Input"></ion-textarea> <br>
-<ion-button expand="block" (click) = "checkInput()">Go To Output Page</ion-button>
+
+
 <ion-list>  
-  <ion-item *ngFor="let entry of form">  
-    <ion-label>{{entry.val}}</ion-label>  
-    <ion-checkbox slot="start" [(ngModel)]="entry.isChecked"></ion-checkbox>  
-  </ion-item>  
+   <ion-item>
+      <ion-checkbox id="fruitInput" slot="start"></ion-checkbox>
+      <ion-label>Apple</ion-label>
+      <ion-checkbox id="fruitInput" slot="start"></ion-checkbox>
+      <ion-label>Orange</ion-label>
+      <ion-checkbox id="fruitInput" slot="start"></ion-checkbox>
+      <ion-label>Banana</ion-label>
+  </ion-item>
 </ion-list>  
+
 <ion-list>  
-  <ion-radio-group id ="fruitInput">   
+  <ion-radio-group id ="programmingInput">   
     <ion-list-header>  
       Subject  
     </ion-list-header>  
@@ -48,25 +54,6 @@
     </ion-item>  
   </ion-radio-group>  
 </ion-list>  
-
-<ion-radio-group (ionChange)="carChangeEvent($event)"  [(ngModel)]="car_id">
-
-  <ion-item>
-      <ion-label>Button 1</ion-label>
-      <ion-radio slot="start" value="1"></ion-radio>
-  </ion-item>
-
-  <ion-item>
-      <ion-label>Button 2</ion-label>
-      <ion-radio slot="start" value="2"></ion-radio>
-  </ion-item>
-
-  <ion-item>
-      <ion-label>Button 3</ion-label>
-      <ion-radio slot="start" value="3"></ion-radio>
-  </ion-item>
-
-</ion-radio-group>
 
 <ion-list>
   <ion-item>
@@ -108,5 +95,5 @@
 </ion-item>  
 </ion-list>  
 
-
+<ion-button expand="block" (click) = "checkInput()">Go To Output Page</ion-button>
 </ion-content>
